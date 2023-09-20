@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heros Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1rem;
+        }
+    /*============ Navbar Start ==============*/
+    ul>li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 15px;
+    }
+    ul>li:hover{
+        color: skyblue;
+        font-size: 20px;
+        
+    }
+    nav{
+        width: 350px;
+    }
+    header{
+        background-color: #242b2e;
+        color: #fff;
+        display: flex;
+        height: 40px;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        font-size: 1.1rem;
+        padding: 10px;
+       /* max-width: 1600px; */
+        margin: 10px;
+    }
+    .logo>img{
+        width: 50px;
+        height: 50px;
+    } 
+    header>button{
+        padding: 5px 45px;
+        border-radius: 5px;
+        border: none;
+        background-color: #0072e1;
+        font-weight: bold;
+        font-size: 13px;
+        color: #fff;
+    }
+    header>button:hover{
+        padding: 7px 50px;
+    }
+    .bar{
+        display: none;
+    }
+    /*============ Navbar End ==============*/
+        .main-section{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 80%;
+            margin: 0 auto; /*remove kerna hai isko*/
+        }
+        .main-section>video{
+            width: 600px;
+            height: 600px;
+            justify-self: end;
+        }
+        .text-sub>img{
+           width: 400px;
+        }
+        .text-sub{
+            color: #1893f7;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 20px;
+            margin-right: 10px;
+        }
+        #para{
+            color: #090303;
+            margin-top: 30px;
+        }
+        .text-sub>big{
+            font-size: 3.4rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        #blackHeading{
+           color: #000;
+           font-size: 2rem;
+           font-weight: 600;
+        }
+        #subBlue{
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        /*=========== Footer Start*/
+ footer{
+    background-color: #070404;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+ }
+ .footer-container>h1{
+    font-size: 60px;
+    color: #383cc1;
+    margin: 25px 0;
+ }
+ .footer-container>h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+ }
+        @media(max-width: 800px) {
+            /*---------------Navbar media query Start-------------------*/
+                        header{
+                 justify-content: space-between;
+            }
+            header>nav,button{
+                display: none;
+            }
+            .logo>img{
+                 width: 30px;
+                 height: 30px;
+            }
+            .bar{
+                display: block;
+                font-size: 1.5rem;
+            }
+            /*------------ media quries MainSection Start -----------*/
+            .main-section{
+                display: flex;
+                flex-direction: column;
+            }
+            .main-section>video{
+                width: 100%;
+                height: 100%;
+            }
+            .text-sub>img{
+                width: 70%;
+            }
+            /*------------ media quries MainSection End -----------*/
+                /*---------- Footer Meadia Query*/
+    footer{
+        background-color: #fff;
+        color: #000;
+        height: 50vh;
+    .footer-container>h2{
+    font-size: 20px;
+    }
+    .footer-container>h1{
+    font-size: 30px;
+ }
+ .footer-container{
+    margin-bottom: 50px;
+ }
+        }
+    </style>
+</head>
+<body>
+    <!--========== Navbar Start ====================-->
+    <header>
+        <div class="logo"><img src="https://cdn.logo.com/hotlink-ok/logo-social-sq.png" alt="log9"></div>
+        <nav class="navBar">
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <button>Login</button>
+        <div class="bar"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <!--========== Navbar End ====================-->
+    <!--=============== MainSection Start =================== -->
+    <section class="main-section">
+        <div class="text-sub">
+            <p id="blackHeading">Say Hi To</p>
+            <big id="blueHeading">One Card</big>
+            <p id="subBlue">Co-branded Card Issuers :</p>
+            <img src="https://www.getonecard.app/images/legal/Banking_partners_24thJan_dark__.png" alt="Banking_logo">
+            <p id="para">India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity, transparency, and giving back control to the user.</p>
+        </div>
+        <video loop autoplay="autoplay" controls>
+            <source
+              src="https://www.getonecard.app/images/say_hi_2x_d3_.mp4"
+              type="video/mp4"
+            />
+        </video>
+    </section>
+     <!--=============== MainSection End =================== -->
+        <!--========== Footer Start ============--> 
+   <footer>
+    <div class="footer-container">
+        <h1>No Hidden Fees Ever</h1>
+        <h2>No Joining Fees.</h2>
+        <h2>No Annual Fees.</h2>
+        <h2>No Rewards Redemption Fees.</h2>
+    </div>
+   </footer>
+    <!--========== Footer End ============-->
+</body>
+</html>
